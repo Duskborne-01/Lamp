@@ -1,0 +1,52 @@
+body {
+  background: radial-gradient(circle at 50% 42%,
+      #626262 0%,
+      #363636 62%,
+      #242424 100%);
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  font-size: 10px;
+  overflow: hidden;
+}
+
+.lamp {
+  width: 10em;
+  display: inline-block;
+  transform-origin: top center;
+  transform: rotate(45deg);
+  animation: lamp 5s ease-in-out infinite;
+  margin-top: -16px;
+  filter: drop-shadow(0 18px 12px rgb(0 0 0 / 35%));
+}
+
+.bulb {
+  fill: #fff4a8;
+  fill-opacity: 0.25;
+  filter: drop-shadow(0 0 2px #fff4a8);
+  animation: bulb 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes lamp {
+
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes bulb {
+  from {
+    fill-opacity: 0.2;
+    filter: drop-shadow(0 0 1px #fff4a8);
+  }
+
+  to {
+    fill-opacity: 0.55;
+    filter: drop-shadow(0 0 5px #fff4a8);
+  }
+}
